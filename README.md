@@ -1,6 +1,6 @@
-# Multi-Asset Portfolio Study
+# Stocks, Bonds & Gold: Portfolio Study
 
-![check](https://github.com/ShaikhaKhaledAlz/multi-asset-portfolio/actions/workflows/check.yml/badge.svg)
+![check](https://github.com/ShaikhaKhaledAlz/stocks-bonds-gold-portfolio-study/actions/workflows/check.yml/badge.svg)
 
 **Question:** a long-term investor can put money into stocks, bonds, gold, real estate or cash. How should they split it, and how did each mix hold up in crashes like 2008 and 2020?
 
@@ -185,8 +185,8 @@ data/tbill_3month.csv    ─┤   (step 1 downloads these; they are already incl
 2. Open a terminal and run:
 
 ```bash
-git clone https://github.com/ShaikhaKhaledAlz/multi-asset-portfolio.git
-cd multi-asset-portfolio
+git clone https://github.com/ShaikhaKhaledAlz/stocks-bonds-gold-portfolio-study.git
+cd stocks-bonds-gold-portfolio-study
 pip install -r requirements.txt
 
 python src/step2_compare_assets.py      # each asset on its own

@@ -1,0 +1,22 @@
+# Runs the whole project on GitHub's computers after every change.
+# A green tick = everything works.
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt pytest
+      - run: pytest -v
+      # Also check that the download script still works (saved to a temporary folder,
+      # so the data in the repo is not changed). Allowed to fail if a website is down.
+      - run: python src/step1_download_data.py --out /tmp/download-check
+        continue-on-error: true
